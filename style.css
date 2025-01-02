@@ -1,0 +1,104 @@
+body {
+    background-color: #ffebf2;
+    font-family: 'Great Vibes', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    /* Tamaño de fuente grande para encabezados */
+    text-align: center;
+    color: #ff69b4;
+    /* Color rosa fuerte */
+}
+
+p {
+    font-size: 1.5em;
+    /* Tamaño de fuente mediano para texto principal */
+    text-align: center;
+    color: #ff1493;
+    /* Color rosa oscuro */
+}
+
+a {
+    color: #ff1493;
+    /* Color de enlaces */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff69b4;
+    /* Color de enlaces al pasar el cursor */
+    text-decoration: underline;
+}
+
+.footer {
+    font-size: 1.2em;
+    /* Tamaño de fuente pequeño para pie de página */
+    text-align: center;
+    color: #ffffff;
+    /* Texto en blanco */
+    margin-top: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: #ff1493;
+    position: relative;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: #ff1493;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: -50px;
+}
+
+#message {
+    text-align: center;
+    height: 100%;
+    color: #ff1493;
+}
+
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 600px) {
+    .heart {
+        width: 80px;
+        height: 80px;
+    }
+    .heart::before,
+    .heart::after {
+        width: 80px;
+        height: 80px;
+    }
+    #message {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
